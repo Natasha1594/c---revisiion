@@ -23,5 +23,5 @@ int main(){
     int large_arr[1] = {};
     
    cout << "The largest value is: " << large << endl;
-    
+    return 0;
 }
