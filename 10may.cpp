@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int arr[2] [3] = {{},{}};
+    int arr[2] [3] = {{1,2,3},{4,5,6}};
     {
      int row = sizeof(arr)/ sizeof(arr[0]);
        cout<<row<<endl;
@@ -13,12 +13,12 @@ int main(){
     {
        for (int j = 0; j < column; j++)
        {
-        
+       
         cin>>arr[i][j];
        }
        
     }
-    
+        printArray(arr,row, column);
     }
     
    
