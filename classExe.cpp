@@ -1,27 +1,27 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    int size = 10;
-    int arr[size];
-    int num;
-    cout<<"Enter a number: ";
-    cin>>num;
-
-    for (int i = 0; i < size; i++)
-    {
-        cout<<"Enter the 10 integers: ";
-        cin >> arr[i];
-
-        if (arr[i] == num)
-        {
-            cout<<"The number entered is in the array"<<num<<endl;
+void displayArray(int arr[][3], int rows, int columns) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+            std::cout << arr[i][j] << " ";
         }
-        else{
-            cout<<"The number entered is not in the arrary"<<num<<endl;
-        }
-        
-        
+        cout << endl;
     }
+}
+
+int main() {
+    const int rows = 4;
+    const int columns = 3;
     
+    int array[rows][columns] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9},
+        {10, 11, 12}
+    };
+    
+    displayArray(array, rows, columns);
+    
+    return 0;
 }
